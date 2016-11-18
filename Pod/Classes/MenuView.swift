@@ -57,6 +57,14 @@ open class MenuView: UIScrollView {
     }
     fileprivate var centerOfScreenWidth: CGFloat {
         let screenWidth: CGFloat
+        let rootView = UIApplication.shared.keyWindow?.rootViewController
+      
+        if(rootView is UINavigationController){
+          let navigationController = rootView as! UINavigationController
+          let width = navigationController.visibleViewController?.view.frame.size.width
+          return menuItemViews[currentPage].frame.midX - width! / 2
+        }
+
         if let width = UIApplication.shared.keyWindow?.bounds.width {
             screenWidth = width
         } else {

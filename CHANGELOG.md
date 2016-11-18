@@ -1,3 +1,9 @@
+# 2.0.1 Release notes (2016/11-18)
+
+### Bug fixed
+
+- if used in a FormSheet the MenuView wouldn't be centered
+
 # 2.0.0 Release notes (2016/09-27)
 
 ### Breaking changes
